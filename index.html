@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student Form</h1>
+    <form id="studentForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
+        <input type="date" id="dob" required>
+        <input type="text" id="address" placeholder="Address">
+       <div>
+        <label>Gender:</label>
+        <label for="male"> Male
+        </label>
+        <input type="radio" name="gender" value="male"> 
+
+        <label for="female">Female
+        </label>
+        <input type="radio" name="gender" value="female"> 
+
+        </div>
+        <button type="submit">Add Student</button>
+    </form>
+    <div id="studentList">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+                <!-- Student entries will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
